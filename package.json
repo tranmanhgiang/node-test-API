@@ -1,0 +1,123 @@
+{
+    "name": "Node-api",
+    "version": "1.0.0",
+    "description": "Node Apis service",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/index.ts",
+        "lint:fix": "eslint --fix --quiet --ext=ts src",
+        "prettier": "node node_modules/prettier/bin-prettier.js --write src",
+        "migration:generate": "sequelize migration:generate --migrations-path src/migrations --name",
+        "build:migrations": "tsc -p tsconfig.migrations.json",
+        "seed:generate": "sequelize seed:generate --seeders-path src/seeders --name",
+        "clean": "rm -rf dist",
+        "build": "tsc",
+        "exec:migration": "node command.js --migration",
+        "exec:build": "node command.js --build",
+        "exec:seed": "node command.js --seed",
+        "exec:start": "node command.js --start"
+    },
+    "dependencies": {
+        "@babel/cli": "^7.12.10",
+        "@babel/core": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "@babel/register": "^7.12.10",
+        "@ffmpeg-installer/ffmpeg": "^1.0.20",
+        "bcrypt": "^5.0.0",
+        "bluebird": "^3.7.2",
+        "body-parser": "^1.19.0",
+        "class-validator": "^0.12.2",
+        "compression": "1.7.1",
+        "cors": "^2.8.5",
+        "dayjs": "^1.10.4",
+        "dotenv": "^8.2.0",
+        "email-templates": "^8.0.3",
+        "express": "^4.17.1",
+        "express-validation": "^3.0.5",
+        "express-winston": "^4.0.5",
+        "fluent-ffmpeg": "^2.1.2",
+        "helmet": "^4.3.1",
+        "http-status": "^1.4.2",
+        "json2csv": "^5.0.6",
+        "jsonwebtoken": "^8.5.1",
+        "lodash": "^4.17.20",
+        "multer": "^1.4.2",
+        "mysql2": "^2.3.3",
+        "nanoid": "^3.1.20",
+        "nodemailer": "^6.4.17",
+        "otplib": "^12.0.1",
+        "passport": "^0.4.1",
+        "passport-jwt": "^4.0.0",
+        "pg": "^8.3.0",
+        "pg-hstore": "^2.3.3",
+        "pm2": "^4.5.5",
+        "pug": "^3.0.2",
+        "request": "^2.88.2",
+        "sequelize": "5.22.3",
+        "sequelize-cli": "^6.2.0",
+        "uuid": "^8.3.0",
+        "winston": "^3.3.3"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+        "@babel/plugin-transform-runtime": "^7.12.10",
+        "@babel/preset-typescript": "^7.12.7",
+        "@babel/runtime": "^7.12.5",
+        "@types/bcrypt": "^3.0.0",
+        "@types/bluebird": "^3.5.32",
+        "@types/body-parser": "^1.19.0",
+        "@types/compression": "^1.7.0",
+        "@types/cors": "^2.8.7",
+        "@types/express": "^4.17.7",
+        "@types/fluent-ffmpeg": "^2.1.17",
+        "@types/lodash": "^4.14.161",
+        "@types/multer": "^1.4.5",
+        "@types/node": "12.0.2",
+        "@types/passport-jwt": "^3.0.3",
+        "@types/pg": "^7.14.9",
+        "@types/request": "^2.48.5",
+        "@types/uuid": "^8.3.0",
+        "@typescript-eslint/eslint-plugin": "^4.13.0",
+        "@typescript-eslint/parser": "^4.13.0",
+        "concurrently": "^5.3.0",
+        "eslint": "^7.17.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-prettier": "^7.1.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-no-only-tests": "^2.4.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "husky": "^4.3.7",
+        "lint-staged": "^10.2.11",
+        "nodemon": "^2.0.7",
+        "prettier": "^2.0.5",
+        "ts-node": "^8.10.2",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.7"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run build && lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.ts": [
+            "npm run prettier",
+            "npm run lint:fix",
+            "git add ."
+        ]
+    },
+    "babel": {
+        "presets": [
+            "@babel/env",
+            "@babel/preset-typescript"
+        ],
+        "plugins": [
+            "@babel/plugin-transform-runtime",
+            "@babel/proposal-class-properties",
+            "@babel/proposal-object-rest-spread"
+        ]
+    },
+    "license": "UNLICENSED"
+}

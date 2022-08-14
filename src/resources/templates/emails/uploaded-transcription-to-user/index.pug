@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Jivescribe
+  body
+    div(style='\
+    font-family: Sans-Serif;\
+    max-width: 500px;\
+    border-top: 20px solid #0050b1;\
+    border-bottom: 20px solid #0050b1;\
+    padding: 15px;\
+    ')
+      div(style='align-items: center; width: 50%; margin-left: auto; margin-right: auto')
+        img(style='display: block; width: 250px; height: auto; align-self: center' src='https://i.imgur.com/HAixGVj.png')
+      b(style='color: #000') Hi #{userName},
+      p(style='color: #000')
+        | Your uploaded dictation(s) last 
+        span(style='color: rgb(230, 113, 67); text-decoration: none') #{time} 
+        span(style='color: #000; text-decoration: none')
+        | with unique code: 
+        span(style='color: rgb(230, 113, 67); text-decoration: none') #{dictationId} 
+        span(style='color: #000; text-decoration: none')
+        | has been transcribed. The uploaded transcription(s) are as follows:
+      each file in files
+        p 
+          a(href = file.url target='_blank' style='color: rgb(230, 113, 67)')= file.name
+      p(style='color: #000')
+        | Should you have any other concerns, issues, inquiries or 
+        | suggestions, kindly message us through our email at 
+        span(style='color: rgb(230, 113, 67); text-decoration: none')
+          a(href='mailto:support@jivescribe.com' style='color: rgb(230, 113, 67); text-decoration: none')
+            | support@jivescribe.com
+      p(style='color: #000') Thank you very much. Have a good day!
+      p(style='color: #000') Cheers,
+      img(style='display: block; width: 100px; background-color: lightgray' src='https://i.imgur.com/HAixGVj.png')
+      div(style='display: block; margin-left: 20px; margin-right: 20px; border-top: rgb(168, 165, 165) solid 2px; margin-top: 10px')
+        div
+          p(style='color: rgb(168, 165, 165); text-align: center; font-size: 12px')
+            span(style='color: rgb(168, 165, 165); text-align: center; font-size: 12px') Need assistance? Email us&nbsp;
+            span(style='color: rgb(230, 113, 67); text-decoration: none')
+              a(href='mailto:support@jivescribe.com' style='color: rgb(230, 113, 67); text-decoration: none')
+                | support@jivescribe.com
+            br
+            span(style='color: rgb(168, 165, 165); text-align: center; font-size: 12px') or call us
+            span(style='color: rgb(230, 113, 67); text-decoration: none')
+              a(href='#' style='color: rgb(230, 113, 67); text-decoration: none')  (+61 2) 8287 7314
+          p(style='color: rgb(168, 165, 165); text-align: center; font-size: 12px')
+            | Jivescribe Pty Ltd
+            br
+            | 15/6 Meridian Place
+            br
+            | Bella Vista 2153, NSW Australia

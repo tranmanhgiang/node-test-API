@@ -1,0 +1,3 @@
+-- SELECT 'CREATE DATABASE jivescribe'
+-- WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'jivescribe')\gexec
+-- GRANT ALL PRIVILEGES ON DATABASE jivescribe TO postgres;

@@ -1,0 +1,5809 @@
+{
+	"info": {
+		"_postman_id": "c24a1e82-d00d-488a-90bb-97f5ea94bea8",
+		"name": "Jivescribe documentation",
+		"description": "Jivescribe API Documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Doctor",
+					"item": [
+						{
+							"name": "Sign Up",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"WBC\",\n    \"lastName\": \"WBC\",\n    \"account\": \"WBC\",\n    \"email\": \"fdfsdfdsf@jivescribe.com\",\n    \"password\": \"1111\",\n    \"registrationCode\": \"88888888\",\n    \"turnAroundTimeId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/sign-up",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"sign-up"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Sign Up Failed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"Tien\",\n    \"lastName\": \"Pham\",\n    \"email\": \"phamtien17334@gmail.com\",\n    \"password\": \"123456\",\n    \"registrationCode\": \"66443344\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/sign-up",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"sign-up"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "81"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"51-SG1GCZMhYCjlPlwASOHp/mZdzAk\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Feb 2021 08:49:34 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"code\": 400,\n    \"message\": \"Email Address already in use\",\n    \"data\": null\n}"
+								},
+								{
+									"name": "Sign Up Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"WBC\",\n    \"lastName\": \"WBC\",\n    \"account\": \"WBC\",\n    \"email\": \"fdgxcvfdsfds@jivescribe.com\",\n    \"password\": \"1111\",\n    \"registrationCode\": \"88888888\",\n    \"turnAroundTimeId\": 3\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/sign-up",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"sign-up"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "295"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"127-5M+jLLApslaBgqeQMoZ20AIdsos\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 06 May 2021 08:08:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"user\": {\n            \"id\": 17,\n            \"firstName\": \"WBC\",\n            \"lastName\": \"WBC\",\n            \"account\": \"WBC\",\n            \"email\": \"fdgxcvfdsfds@jivescribe.com\",\n            \"turnAroundTimeId\": 3,\n            \"userRole\": \"Doctor\",\n            \"updatedAt\": \"2021-05-06T08:08:57.704Z\",\n            \"createdAt\": \"2021-05-06T08:08:57.704Z\",\n            \"avatar\": null\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"password\": \"1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/login",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"login"
+									]
+								},
+								"description": "User Login"
+							},
+							"response": [
+								{
+									"name": "Login Successful",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"password\": \"123456\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/login",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10b-mPucHADmLIjq6o80bBFHwOcZYL0\""
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "ARR/3.0"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "ASP.NET"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Feb 2021 07:43:36 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "267"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjEyNTExMDE2LCJleHAiOjE2MTQyMzkwMTZ9.WpQOQPEZO0MbcdIJOjbU-qAScnwrI7x3TFiiBpz557Y\",\n        \"status\": \"SUCCESS\"\n    }\n}"
+								},
+								{
+									"name": "Login Wrong Email Password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"password\": \"555555\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/login",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"91-GMeDfG3h050yC9VdR9EcSJjDyQw\""
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "ARR/3.0"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "ASP.NET"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Feb 2021 07:40:04 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "145"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"code\": 401,\n    \"message\": \"Either email or password is incorrect. Please try again\",\n    \"data\": {\n        \"token\": null,\n        \"status\": \"INVALID_ACCOUNT\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Editor",
+					"item": [
+						{
+							"name": "Sign Up",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Wilbert M.\",\n    \"lastName\": \"Ducusin\",\n    \"email\": \"mylene@jivescribe.com\",\n    \"password\": \"Hanoi@2021\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/editor/sign-up",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"editor",
+										"sign-up"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Sign Up Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"Tien\",\n    \"lastName\": \"Pham\",\n    \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n    \"password\": \"Letpgin#321\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/editor/sign-up",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"editor",
+												"sign-up"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "269"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10d-Q/pJjqRyWoqA8VDTVyi9ow3eIoQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Apr 2021 04:40:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"editor\": {\n            \"id\": 2,\n            \"firstName\": \"Tien\",\n            \"lastName\": \"Pham\",\n            \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n            \"userRole\": \"Editor\",\n            \"updatedAt\": \"2021-04-01T04:40:59.126Z\",\n            \"createdAt\": \"2021-04-01T04:40:59.126Z\",\n            \"avatar\": \"\"\n        }\n    }\n}"
+								},
+								{
+									"name": "Sign Up Not Match Rule",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"Tien\",\n    \"lastName\": \"Pham\",\n    \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n    \"password\": \"Letpginfff\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/editor/sign-up",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"editor",
+												"sign-up"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "86"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"56-aoptI0wFJPMQu1YXtsBCfK1aKao\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Apr 2021 04:41:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"code\": 400,\n    \"message\": \"Password does not match the rules\",\n    \"data\": null\n}"
+								},
+								{
+									"name": "Sign Up Existed Email",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"Tien\",\n    \"lastName\": \"Pham\",\n    \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n    \"password\": \"Letpgin#321\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/editor/sign-up",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"editor",
+												"sign-up"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "81"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"51-SG1GCZMhYCjlPlwASOHp/mZdzAk\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Apr 2021 04:42:24 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"code\": 400,\n    \"message\": \"Email Address already in use\",\n    \"data\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"lorraine@jivescribe.com\",\n    \"password\": \"Hanoi@2021\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/editor/login",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"editor",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Login Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n    \"password\": \"Letpgin#321\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/editor/login",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"editor",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "104"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"68-h8ms7MtN7+hm504nDFra9zsQ/EY\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Apr 2021 04:43:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"email\": \"tien.phamnguyen@powergatesoftware.com\"\n    }\n}"
+								},
+								{
+									"name": "Login Invalid Account",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n    \"password\": \"Letpgin#333\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/editor/login",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"editor",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "145"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"91-GMeDfG3h050yC9VdR9EcSJjDyQw\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Apr 2021 04:45:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"code\": 401,\n    \"message\": \"Either email or password is incorrect. Please try again\",\n    \"data\": {\n        \"token\": null,\n        \"status\": \"INVALID_ACCOUNT\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Verify Code Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n    \"code\": \"623282\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/editor/verify-login",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"editor",
+										"verify-login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Verify Code Login Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n    \"code\": \"960295\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/editor/verify-login",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"editor",
+												"verify-login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "268"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10c-hAe8Gi51U8+//h5jjwN6D+/x3+4\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Apr 2021 04:45:07 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyMzA3LCJleHAiOjE2MTg5ODAzMDd9.I1yU-E1CCHqZVbAK7E9j2edoILMwcNakrs7i-9rb-mg\"\n    }\n}"
+								},
+								{
+									"name": "Verify Code Login Failed Code",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n    \"code\": \"960222\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL_JIVE}}/api/v1/user/editor/verify-login",
+											"host": [
+												"{{API_URL_JIVE}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"editor",
+												"verify-login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "80"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"50-tbpRD1fgjAZFkFjFEpczydc3XSM\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Apr 2021 04:45:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"code\": 400,\n    \"message\": \"Incorrect verification code\",\n    \"data\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Check Registration Code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"registrationCode\": \"30303030\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/user/verify-regis-code",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"verify-regis-code"
+							]
+						},
+						"description": "Check Registration Code of User Sign Up"
+					},
+					"response": [
+						{
+							"name": "Check Registration Code Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"registrationCode\": \"66666666\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/verify-regis-code",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"verify-regis-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-wDKIgVWFE+zosCO4J/xldoOjevo\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ARR/3.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:25:50 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"isValidCode\": true\n    }\n}"
+						},
+						{
+							"name": "Check Registration Code With Invalid Code",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"registrationCode\": \"77777777\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/verify-regis-code",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"verify-regis-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-KYPm4YKyk5CxQ7ezb/0lt0uDN60\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:30:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"isValidCode\": false\n    }\n}"
+						},
+						{
+							"name": "Check Registration Code With Valid Code",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"registrationCode\": \"11111111\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/verify-regis-code",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"verify-regis-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-wDKIgVWFE+zosCO4J/xldoOjevo\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ARR/3.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:37:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"isValidCode\": true\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Verify Code Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"code\": \"166220\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/user/verify-sign-up-code",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"verify-sign-up-code"
+							]
+						},
+						"description": "POST Verification Code from Email to Verify Email"
+					},
+					"response": [
+						{
+							"name": "Verify Code Sign Up Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"code\": \"199627\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/verify-sign-up-code",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"verify-sign-up-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f8-UiIjt6C9vhwlVfx0OOsZypCVlC8\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ARR/3.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:41:23 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjEyNTEwODgzLCJleHAiOjE2MTQyMzg4ODN9.tfPh06Kn8Aj3fVSPn8WJA6IKQxnCXkTrTp5nuIYpf68\"\n    }\n}"
+						},
+						{
+							"name": "Verify Code Sign Up Incorrect Code",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"code\": \"123232\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/verify-sign-up-code",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"verify-sign-up-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"50-tbpRD1fgjAZFkFjFEpczydc3XSM\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ARR/3.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:43:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 400,\n    \"message\": \"Incorrect verification code\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Send Email Get Verify Code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"lorraine@jivescribe.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/user/send-verify-code",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"send-verify-code"
+							]
+						},
+						"description": "Send Email to get Verification Code"
+					},
+					"response": [
+						{
+							"name": "Send Email Get Verify Code Not Correct Email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"phamtien170999@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/send-verify-code",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"send-verify-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"61-IoJYT5v+BDiiRXwWjCFg0pejxJw\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ARR/3.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:45:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "97"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 400,\n    \"message\": \"The email address you entered does not exist\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Send Email Get Verify Code Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"phamtien1709@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/send-verify-code",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"send-verify-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-5+HxbQNCZJj6Sow1G2+a1kfF+Wo\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ARR/3.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:44:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Verify Code Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"code\": \"232874\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/user/verify-reset-password-code",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"verify-reset-password-code"
+							]
+						},
+						"description": "Validate Code to Reset Password"
+					},
+					"response": [
+						{
+							"name": "Verify Code Reset Password Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"code\": \"232878\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/verify-reset-password-code",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"verify-reset-password-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-hGfDMCBEqrEBM2XJUPY2Umk4htk\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ARR/3.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:45:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"code\": \"688489\"\n    }\n}"
+						},
+						{
+							"name": "Verify Code Reset Password Incorrect",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"code\": \"232874\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/verify-reset-password-code",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"verify-reset-password-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"50-tbpRD1fgjAZFkFjFEpczydc3XSM\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ARR/3.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:45:56 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 400,\n    \"message\": \"Incorrect verification code\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"newPassword\": \"666666\",\n    \"confirmationPassword\": \"666666\",\n    \"code\": \"333333\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/user/reset-password",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"reset-password"
+							]
+						},
+						"description": "Reset Password when forgot"
+					},
+					"response": [
+						{
+							"name": "Reset Password Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"newPassword\": \"666666\",\n    \"confirmationPassword\": \"666666\",\n    \"code\": \"466768\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/reset-password",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"reset-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-5+HxbQNCZJj6Sow1G2+a1kfF+Wo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 03:52:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Reset Password Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"phamtien1709@gmail.com\",\n    \"newPassword\": \"666666\",\n    \"confirmationPassword\": \"666666\",\n    \"code\": \"333333\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/reset-password",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"reset-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"50-tbpRD1fgjAZFkFjFEpczydc3XSM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 06:33:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 400,\n    \"message\": \"Incorrect verification code\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE5Njc5Njk1LCJleHAiOjE2MjE0MDc2OTV9.rM6cLA1k1L3lWemEPS6Kxay-IqzqT-OB7HPOn0LBpvY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"1233\",\n    \"newPassword\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/user/change-password",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"change-password"
+							]
+						},
+						"description": "Change Password from Old Password"
+					},
+					"response": [
+						{
+							"name": "Change Password Wrong Current Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjEyNTExMTc5LCJleHAiOjE2MTQyMzkxNzl9.f-Fk3vEjQhR6AGFjMg_sLbsWqxoqqrW4an3k7rwKjT0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"oldPassword\": \"123456\",\n    \"newPassword\": \"111111\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/change-password",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"change-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"61-IoJYT5v+BDiiRXwWjCFg0pejxJw\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ARR/3.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:49:55 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "97"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 400,\n    \"message\": \"The email address you entered does not exist\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Change Password Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjEyNTExMTc5LCJleHAiOjE2MTQyMzkxNzl9.f-Fk3vEjQhR6AGFjMg_sLbsWqxoqqrW4an3k7rwKjT0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"oldPassword\": \"123456\",\n    \"newPassword\": \"111111\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/change-password",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"change-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-5+HxbQNCZJj6Sow1G2+a1kfF+Wo\""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ARR/3.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Feb 2021 07:47:21 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Profile User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE5NTk3Nzg2LCJleHAiOjE2MjEzMjU3ODZ9.eRiRTPKfycKaWkXks1QDOOPe1-Bo30Hbgk98yQxzcQo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/user/profile",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Profile User Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/profile",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "267"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10b-FRB7xgEZBj2apgUGNYIQs/8W3Ys\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 04:50:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"firstName\": \"Tien\",\n            \"lastName\": \"Pham\",\n            \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n            \"avatar\": \"\",\n            \"userRole\": \"Editor\",\n            \"createdAt\": \"2021-04-01T04:40:59.126Z\",\n            \"updatedAt\": \"2021-04-01T04:41:44.939Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Change Avatar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3ODY4NTAwLCJleHAiOjE2MTk1OTY1MDB9.po3Bx_1QCZA919FBa7esJmvwUlEQRJbA7SdI0gdhIfQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/phamtien/Downloads/acomadmin.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/user/change-avatar",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"change-avatar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change Avatar Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/phamtien/Downloads/2020-02-05 18.37.23.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/change-avatar",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"change-avatar"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "284"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11c-Q4DPHJeRYGO2AnxPKB9JlIkFB8w\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 04:52:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"firstName\": \"Tien\",\n            \"lastName\": \"Pham\",\n            \"email\": \"tien.phamnguyen@powergatesoftware.com\",\n            \"avatar\": \"1617252779252.jpg\",\n            \"userRole\": \"Editor\",\n            \"createdAt\": \"2021-04-01T04:40:59.126Z\",\n            \"updatedAt\": \"2021-04-01T04:52:59.260Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Avatar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/user/avatar/1617868601224.png",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"avatar",
+								"1617868601224.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTk2Njk3MTEsImV4cCI6MTYyMTM5NzcxMX0.nut7I3Lnboflrr8RkmaDLdcBJ4Z9f6aN_fWwz56RBh0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/user/client-user?account=Jivescribe",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"client-user"
+							],
+							"query": [
+								{
+									"key": "account",
+									"value": "Jivescribe"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Client Users Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTk2Njk3MTEsImV4cCI6MTYyMTM5NzcxMX0.nut7I3Lnboflrr8RkmaDLdcBJ4Z9f6aN_fWwz56RBh0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/user/client-user?account=Jivescribe",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"client-user"
+									],
+									"query": [
+										{
+											"key": "account",
+											"value": "Jivescribe"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "587"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24b-780FqBMSW/t5GhwGas3VYGCDyug\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 May 2021 07:10:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"list\": [\n            {\n                \"id\": 1,\n                \"firstName\": \"Phohoho\",\n                \"lastName\": \"Budhe\",\n                \"account\": \"Jivescribe\",\n                \"email\": \"phamtien1709@gmail.com\",\n                \"avatar\": null,\n                \"userRole\": \"Doctor\",\n                \"createdAt\": \"2021-04-19T04:04:56.878Z\",\n                \"updatedAt\": \"2021-04-29T07:25:52.820Z\"\n            },\n            {\n                \"id\": 3,\n                \"firstName\": \"Value Chaha\",\n                \"lastName\": \"Change\",\n                \"account\": \"Jivescribe\",\n                \"email\": \"tien.phamnguyen11@powergatesoftware.com\",\n                \"avatar\": null,\n                \"userRole\": \"Doctor\",\n                \"createdAt\": \"2021-04-28T04:59:28.674Z\",\n                \"updatedAt\": \"2021-04-28T04:59:28.674Z\"\n            }\n        ],\n        \"total\": 2,\n        \"current_page\": 1,\n        \"accounts\": [\n            \"WBC\",\n            \"PG\",\n            \"Jivescribe\"\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Record",
+			"item": [
+				{
+					"name": "Upload File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE5NDA1NjU0LCJleHAiOjE2MjExMzM2NTR9.41ZT3rp0rtLzM9U94057KzVDPE4fEd8bbeAk00T9Rgg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileName",
+									"value": "asdjsad.mp3",
+									"type": "text"
+								},
+								{
+									"key": "dictationId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "50000",
+									"type": "text"
+								},
+								{
+									"key": "dateRecorded",
+									"value": "1617353139",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/phamtien/Downloads/1619145548323_Jive_Recorded_Dictation_1619145345046.mp3"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/record/upload",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"record",
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload File Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxNzY5NjEwOSwiZXhwIjoxNjE5NDI0MTA5fQ.Vy7BBVkHqEZqKnSuSkPPhR4-z87S4QgLwuFYujLnlZ8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fileName",
+											"value": "Jive_Recorded_Dictation_16159666",
+											"type": "text"
+										},
+										{
+											"key": "dictationId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "duration",
+											"value": "50000",
+											"type": "text"
+										},
+										{
+											"key": "dateRecorded",
+											"value": "1617253139",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/phamtien/Work/PG/JiveAPI/records/Jive_Recorded_Dictation_1615975168797.mp4"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/record/upload",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"record",
+										"upload"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.16.1"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Apr 2021 08:34:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "310"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"136-1ela98V6efGDd2NY1GMDA2QHdqs\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"record\": {\n            \"deleted\": false,\n            \"id\": 2378,\n            \"fileName\": \"1617698097185.mp4\",\n            \"duration\": \"50000\",\n            \"dictationId\": 3,\n            \"filePath\": \"1617698097185.mp4\",\n            \"dateRecorded\": \"2021-04-06T08:34:57.194Z\",\n            \"updatedAt\": \"2021-04-06T08:34:57.194Z\",\n            \"createdAt\": \"2021-04-06T08:34:57.194Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get History Upload",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE3Nzg1MTUyLCJleHAiOjE2MTk1MTMxNTJ9.-FmzTl-1p6CZC2PhS4QdVCCnDw_NEk1FfdPyqq0ham8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/record/history?searchString=Red&status=Unassign",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"record",
+								"history"
+							],
+							"query": [
+								{
+									"key": "searchString",
+									"value": "Red"
+								},
+								{
+									"key": "status",
+									"value": "Unassign"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get History Upload Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/record/history",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"record",
+										"history"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "321"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"141-iX36vWrwVhWptTChQEt9tM3hqgA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 05:00:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"records\": [\n            {\n                \"id\": 1,\n                \"userId\": 2,\n                \"fileName\": \"Jive_Recorded_Dictation 1\",\n                \"duration\": \"50000\",\n                \"dateRecorded\": \"2021-04-01T04:59:30.875Z\",\n                \"filePath\": \"Jive_Recorded_Dictation 1\",\n                \"deleted\": false,\n                \"createdAt\": \"2021-04-01T04:59:30.877Z\",\n                \"updatedAt\": \"2021-04-01T04:59:30.877Z\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Uploaded Success Files",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxOTY4NzYwNCwiZXhwIjoxNjIxNDE1NjA0fQ.8lE0PWV1Y18x70VGK0KYlEVblmWeqTeRFGzEmiM4T_I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"files\": [\n        \"Jive_Recorded_Dictation 1\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/record/uploaded-success-files",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"record",
+								"uploaded-success-files"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Uploaded Success Files Success Send Email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"files\": [\n        \"Jive_Recorded_Dictation 1\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/record/uploaded-success-files",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"record",
+										"uploaded-success-files"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-5+HxbQNCZJj6Sow1G2+a1kfF+Wo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 05:02:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/record/get-file/Jive_Recorded_Dictation%201",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"record",
+								"get-file",
+								"Jive_Recorded_Dictation%201"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get File Direct HTML Page",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/record/get-file/Jive_Recorded_Dictation%201",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"record",
+										"get-file",
+										"Jive_Recorded_Dictation%201"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "277"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"115-4UVpzSboEDhkJW/QRpaGDCX5ywU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 05:03:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html>\n    <head></head>\n    <body>\n        <h3>Link will direct you to download the audio!</h3>\n        <script>\n        const downloadAction = async () => { window.location.replace(window.location.href+\"/download\"); } \n        downloadAction();\n    </script>\n    </body>\n</html>"
+						}
+					]
+				},
+				{
+					"name": "Download File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/record/get-file/1617784988029_Dictation_BLofes/download",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"record",
+								"get-file",
+								"1617784988029_Dictation_BLofes",
+								"download"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assignee",
+			"item": [
+				{
+					"name": "Get Assignees",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTg4MDUxNTksImV4cCI6MTYyMDUzMzE1OX0.yMIu_K9wUjvGnKy--khHaMuePPfD72EcNM_XLGD6uQc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/assignee?page=1&searchValue=",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignee"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "searchValue",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Assignees Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/assignee",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"assignee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "93"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5d-QY69Ir25o4vPVqwc/ketQjS1SAI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 06:34:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"list\": [],\n        \"total\": 0,\n        \"current_page\": 1\n    }\n}"
+						},
+						{
+							"name": "Get Assignees With Params Pagination",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/assignee?page=1&pageSize=3&searchValue=aaa",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"assignee"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "3"
+										},
+										{
+											"key": "searchValue",
+											"value": "aaa"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "95"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5f-Vn1bbxwqqgxc0ENkZm/OksgXT7c\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 08:14:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"list\": [],\n        \"total\": 0,\n        \"current_page\": \"1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Assignee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTg4OTIxMzYsImV4cCI6MTYyMDYyMDEzNn0.uBK40WutdJs69t8cq1j4H0etq08c0bK4O9AbGTuiEAE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Dylan\",\n    \"lastName\": \"Anderson\",\n    \"email\": \"Anderson@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/assignee",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Assignee Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Duong\",\n    \"lastName\": \"Hoa\",\n    \"email\": \"quanvu.tien@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/assignee",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"assignee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-xh6ITChHxlT+Azp3EZevYaKuPkQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 06:36:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"assignee\": {\n            \"id\": 1,\n            \"firstName\": \"Duong\",\n            \"lastName\": \"Hoa\",\n            \"email\": \"quanvu.tien@gmail.com\",\n            \"updatedAt\": \"2021-04-01T06:36:28.417Z\",\n            \"createdAt\": \"2021-04-01T06:36:28.417Z\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Create Assignee Invalid Email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Duong\",\n    \"lastName\": \"Hoa\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/assignee",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"assignee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-kG+b557ZlBeTnYtsrgHOXtmHht0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 06:36:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 400,\n    \"message\": \"email is required\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Assignee",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/assignee/1",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignee",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Assignee Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/assignee/1",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"assignee",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-5+HxbQNCZJj6Sow1G2+a1kfF+Wo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 06:38:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Many Assignees",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyMzA3LCJleHAiOjE2MTg5ODAzMDd9.I1yU-E1CCHqZVbAK7E9j2edoILMwcNakrs7i-9rb-mg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"assigneeIds\": [\n        7,\n        8\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/assignee",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Many Assignees Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyMzA3LCJleHAiOjE2MTg5ODAzMDd9.I1yU-E1CCHqZVbAK7E9j2edoILMwcNakrs7i-9rb-mg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"assigneeIds\": [\n        4,\n        6\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/assignee",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"assignee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"47-J/JA9C8BhiOznZKSU7+egHJOw2U\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 07 Apr 2021 08:02:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 404,\n    \"message\": \"Not found assignee\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Delete Many Assignees Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyMzA3LCJleHAiOjE2MTg5ODAzMDd9.I1yU-E1CCHqZVbAK7E9j2edoILMwcNakrs7i-9rb-mg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"assigneeIds\": [\n        7,\n        8\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/assignee",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"assignee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-5+HxbQNCZJj6Sow1G2+a1kfF+Wo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 07 Apr 2021 08:04:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Turn Around Time",
+			"item": [
+				{
+					"name": "Get Turn Around Times",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/turnAroundTime?page=1",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"turnAroundTime"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "searchValue",
+									"value": "aaa",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Turn Around Times Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/turnAroundTime",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"turnAroundTime"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "93"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5d-QY69Ir25o4vPVqwc/ketQjS1SAI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 06:39:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"list\": [],\n        \"total\": 0,\n        \"current_page\": 1\n    }\n}"
+						},
+						{
+							"name": "Get Turn Around Times With Params Pagination",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/turnAroundTime?page=1&pageSize=3&searchValue=aaa",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"turnAroundTime"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "3"
+										},
+										{
+											"key": "searchValue",
+											"value": "aaa"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "95"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5f-Vn1bbxwqqgxc0ENkZm/OksgXT7c\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 08:14:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"list\": [],\n        \"total\": 0,\n        \"current_page\": \"1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Turn Around Time",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTg4OTIxMzYsImV4cCI6MTYyMDYyMDEzNn0.uBK40WutdJs69t8cq1j4H0etq08c0bK4O9AbGTuiEAE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value\": \"24 hours TAT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/turnAroundTime",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"turnAroundTime"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Turn Around Time Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"value\": \"2 hours TAT\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/turnAroundTime",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"turnAroundTime"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b6-h9J2xyS6w6LibI79/rBu+szsgLI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 06:40:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"turnAroundTime\": {\n            \"id\": 1,\n            \"value\": \"2 hours TAT\",\n            \"updatedAt\": \"2021-04-01T06:40:53.217Z\",\n            \"createdAt\": \"2021-04-01T06:40:53.217Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Turn Around Time",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/turnAroundTime/1",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"turnAroundTime",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Turn Around Time Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3MjUyNjM4LCJleHAiOjE2MTg5ODA2Mzh9.E-m6PFlLquRtmj8k6Eh3K42OYrDNU2yM62kjFBo54nw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/turnAroundTime/1",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"turnAroundTime",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-5+HxbQNCZJj6Sow1G2+a1kfF+Wo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Apr 2021 06:41:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dictation",
+			"item": [
+				{
+					"name": "Get list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTk2Njk3MTEsImV4cCI6MTYyMTM5NzcxMX0.nut7I3Lnboflrr8RkmaDLdcBJ4Z9f6aN_fWwz56RBh0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation?page=1&pageSize=40",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation"
+							],
+							"query": [
+								{
+									"key": "searchValue",
+									"value": "son",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "turnAroundTime",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "firstName",
+									"disabled": true
+								},
+								{
+									"key": "sortDirection",
+									"value": "desc",
+									"disabled": true
+								},
+								{
+									"key": "fromDate",
+									"value": "2021-04-01T10:46:09.932Z",
+									"disabled": true
+								},
+								{
+									"key": "isExport",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "40"
+								},
+								{
+									"key": "searchValue",
+									"value": "Chaha",
+									"disabled": true
+								},
+								{
+									"key": "sortDirection",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Unassign",
+									"disabled": true
+								},
+								{
+									"key": "turnAroundTime",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get list Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/dictation?status=Submitted&searchValue=son&page=1&turnAroundTime=1",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dictation"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "Submitted"
+										},
+										{
+											"key": "searchValue",
+											"value": "son"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "turnAroundTime",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "233"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e9-r+sxOQ6rvu11JnXfuXhSON3Eyro\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 05 Apr 2021 15:38:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"list\": [\n            {\n                \"id\": 1,\n                \"status\": \"Unassign\",\n                \"remarks\": \"123123\",\n                \"createdAt\": \"2021-04-05T14:23:45.287Z\",\n                \"user\": {\n                    \"id\": 1,\n                    \"firstName\": \"son\",\n                    \"lastName\": \"pham\"\n                }\n            }\n        ],\n        \"total\": 1,\n        \"current_page\": \"1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get resource",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE3Nzg1MTUyLCJleHAiOjE2MTk1MTMxNTJ9.-FmzTl-1p6CZC2PhS4QdVCCnDw_NEk1FfdPyqq0ham8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation/resource/12",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation",
+								"resource",
+								"12"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get resource",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/dictation/resource/1",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dictation",
+										"resource",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "166"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a6-clHuNpaD0BHMKLgJTsUlDNVlERU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Apr 2021 03:15:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"remarks\": \"123123\",\n        \"records\": [\n            {\n                \"id\": 1,\n                \"fileName\": \"file1.mp4\",\n                \"filePath\": \"file1.mp4\"\n            }\n        ],\n        \"attachments\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create dictatioin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjIwMjg3ODY2LCJleHAiOjE2MjIwMTU4NjZ9.JZN5CrruIsgQTzq9G9-PqW2iKIpr7UZ2I3b7-dd52Xk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"remarks\": \"Well those are the three categories of machine guns\",\n    \"status\": \"Unassign\",\n    \"userId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"turnAroundTimeId\": 1,\n    \"userId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/dictation",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dictation"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dc-gP/1E4U44jHcQEiRmq3ptA0N8sg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Apr 2021 03:51:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"dictation\": {\n            \"status\": \"Unassign\",\n            \"remarks\": \"\",\n            \"id\": 6,\n            \"turnAroundTimeId\": 1,\n            \"userId\": 1,\n            \"updatedAt\": \"2021-04-06T03:51:38.882Z\",\n            \"createdAt\": \"2021-04-06T03:51:38.882Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload attachment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxNzY5NjEwOSwiZXhwIjoxNjE5NDI0MTA5fQ.Vy7BBVkHqEZqKnSuSkPPhR4-z87S4QgLwuFYujLnlZ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileName",
+									"value": "This is Baby.png",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/phamtien/Downloads/Screen Shot 2021-04-06 at 09.03.45.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation/upload-attachment/14",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation",
+								"upload-attachment",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload attachment Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxNzY5NjEwOSwiZXhwIjoxNjE5NDI0MTA5fQ.Vy7BBVkHqEZqKnSuSkPPhR4-z87S4QgLwuFYujLnlZ8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fileName",
+											"value": "This is Baby",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/phamtien/Downloads/Screenshot_20190415-112539_Instagram.jpg"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/dictation/upload-attachment/5",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dictation",
+										"upload-attachment",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.16.1"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Apr 2021 08:10:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "246"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f6-a8QLiy/xGiMGY59zy4OHWHKCxmg\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"record\": {\n            \"deleted\": false,\n            \"id\": 5,\n            \"fileName\": \"1617696650488.jpg\",\n            \"filePath\": \"1617696650488.jpg\",\n            \"dictationId\": 5,\n            \"updatedAt\": \"2021-04-06T08:10:50.488Z\",\n            \"createdAt\": \"2021-04-06T08:10:50.488Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload Transcription",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTg4OTIxMzYsImV4cCI6MTYyMDYyMDEzNn0.uBK40WutdJs69t8cq1j4H0etq08c0bK4O9AbGTuiEAE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/phamtien/Downloads/1618308657254_Sharespace Flow & pricingffdfdfdsfsd.docx"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation/upload-transcription/1",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation",
+								"upload-transcription",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload Transcription Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxNzY5NjEwOSwiZXhwIjoxNjE5NDI0MTA5fQ.Vy7BBVkHqEZqKnSuSkPPhR4-z87S4QgLwuFYujLnlZ8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "fileName",
+											"value": "This is Baby.docx",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/phamtien/Downloads/Config Alias trong react.docx"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/dictation/upload-transcription/12",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dictation",
+										"upload-transcription",
+										"12"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "282"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11a-UzDgKD0g9AglnvZ635+oWpbCpf4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Apr 2021 10:07:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"transcription\": {\n            \"deleted\": false,\n            \"id\": 2,\n            \"fileName\": \"1617876457804_This is Baby.docx\",\n            \"filePath\": \"1617876457804_This is Baby.docx\",\n            \"dictationId\": 12,\n            \"updatedAt\": \"2021-04-08T10:07:37.805Z\",\n            \"createdAt\": \"2021-04-08T10:07:37.805Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get File Attachment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation/attachment/get-file/10",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation",
+								"attachment",
+								"get-file",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get File Transcription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation/transcription/get-file/2",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation",
+								"transcription",
+								"get-file",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Transcriptions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxNzY5NjEwOSwiZXhwIjoxNjE5NDI0MTA5fQ.Vy7BBVkHqEZqKnSuSkPPhR4-z87S4QgLwuFYujLnlZ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation/12/transcriptions",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation",
+								"12",
+								"transcriptions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get List Transcriptions Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxNzY5NjEwOSwiZXhwIjoxNjE5NDI0MTA5fQ.Vy7BBVkHqEZqKnSuSkPPhR4-z87S4QgLwuFYujLnlZ8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"dictationId\": 12\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/dictation/12/transcriptions",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dictation",
+										"12",
+										"transcriptions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-90woW1MkyxPkHbbltGGLwXLnC9Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Apr 2021 03:20:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"transcriptions\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Transcription By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxNzY5NjEwOSwiZXhwIjoxNjE5NDI0MTA5fQ.Vy7BBVkHqEZqKnSuSkPPhR4-z87S4QgLwuFYujLnlZ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation/transcription/2",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation",
+								"transcription",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Transcription By Id Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxNzY5NjEwOSwiZXhwIjoxNjE5NDI0MTA5fQ.Vy7BBVkHqEZqKnSuSkPPhR4-z87S4QgLwuFYujLnlZ8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/dictation/transcription/2",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dictation",
+										"transcription",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-5+HxbQNCZJj6Sow1G2+a1kfF+Wo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Apr 2021 09:31:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Export CSV",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTg4MDUxNTksImV4cCI6MTYyMDUzMzE1OX0.yMIu_K9wUjvGnKy--khHaMuePPfD72EcNM_XLGD6uQc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation/export-csv?fromDate=2021-04-01T10:46:09.932Z&status=Submitted,Finished",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation",
+								"export-csv"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2021-04-01T10:46:09.932Z"
+								},
+								{
+									"key": "status",
+									"value": "Submitted,Finished"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxNzY5NjEwOSwiZXhwIjoxNjE5NDI0MTA5fQ.Vy7BBVkHqEZqKnSuSkPPhR4-z87S4QgLwuFYujLnlZ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/dictation/update-status/3?status=Unassign",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dictation",
+								"update-status",
+								"3"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "Unassign"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Status Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDIsImVtYWlsIjoicGhhbXRpZW4xNzA5QGdtYWlsLmNvbSIsImlhdCI6MTYxNzY5NjEwOSwiZXhwIjoxNjE5NDI0MTA5fQ.Vy7BBVkHqEZqKnSuSkPPhR4-z87S4QgLwuFYujLnlZ8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/dictation/update-status/3?status=Unassign",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dictation",
+										"update-status",
+										"3"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "Unassign"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-5+HxbQNCZJj6Sow1G2+a1kfF+Wo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Apr 2021 02:50:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EditorInCharge",
+			"item": [
+				{
+					"name": "Get list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjEyNTExMTc5LCJleHAiOjE2MTQyMzkxNzl9.f-Fk3vEjQhR6AGFjMg_sLbsWqxoqqrW4an3k7rwKjT0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/editor-in-charge?dictationId=1&sortBy=firstName&sortDirection=ASC",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"editor-in-charge"
+							],
+							"query": [
+								{
+									"key": "dictationId",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "firstName"
+								},
+								{
+									"key": "sortDirection",
+									"value": "ASC"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get list Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjEyNTExMTc5LCJleHAiOjE2MTQyMzkxNzl9.f-Fk3vEjQhR6AGFjMg_sLbsWqxoqqrW4an3k7rwKjT0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/editor-in-charge/?dictationId=1&sortBy=firstName&sortDirection=ASC",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"editor-in-charge",
+										""
+									],
+									"query": [
+										{
+											"key": "dictationId",
+											"value": "1"
+										},
+										{
+											"key": "sortBy",
+											"value": "firstName"
+										},
+										{
+											"key": "sortDirection",
+											"value": "ASC"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "258"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"102-9M/llq8IHqg8TYe3QRK6n5FaLp4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Apr 2021 08:04:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"editorInCharges\": [\n            {\n                \"id\": 2,\n                \"user\": {\n                    \"id\": 2,\n                    \"firstName\": \"ron\",\n                    \"lastName\": \"pham\",\n                    \"email\": \"sownpham2@gmail.com\"\n                }\n            },\n            {\n                \"id\": 1,\n                \"user\": {\n                    \"id\": 1,\n                    \"firstName\": \"son\",\n                    \"lastName\": \"pham\",\n                    \"email\": \"sownpham1@gmail.com\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Editor In Charge",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTg4OTIxMzYsImV4cCI6MTYyMDYyMDEzNn0.uBK40WutdJs69t8cq1j4H0etq08c0bK4O9AbGTuiEAE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dictationId\": 9,\n    \"userId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/editor-in-charge",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"editor-in-charge"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save EditorInCharge",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjEyNTExMTc5LCJleHAiOjE2MTQyMzkxNzl9.f-Fk3vEjQhR6AGFjMg_sLbsWqxoqqrW4an3k7rwKjT0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"dictationId\": 1,\n    \"userId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/editor-in-charge",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"editor-in-charge"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bb-Xo7NmrVEQqdj42DhuPdHCETmV1s\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Apr 2021 08:15:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"editorInCharge\": {\n            \"id\": 8,\n            \"dictationId\": 1,\n            \"userId\": 1,\n            \"updatedAt\": \"2021-04-06T08:15:02.838Z\",\n            \"createdAt\": \"2021-04-06T08:15:02.838Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Editor In Charge",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjEyNTExMTc5LCJleHAiOjE2MTQyMzkxNzl9.f-Fk3vEjQhR6AGFjMg_sLbsWqxoqqrW4an3k7rwKjT0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dictationId\": 1,\n    \"userId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/editor-in-charge/2",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"editor-in-charge",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save EditorInCharge",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjEyNTExMTc5LCJleHAiOjE2MTQyMzkxNzl9.f-Fk3vEjQhR6AGFjMg_sLbsWqxoqqrW4an3k7rwKjT0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"dictationId\": 1,\n    \"userId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/editor-in-charge",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"editor-in-charge"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bb-Xo7NmrVEQqdj42DhuPdHCETmV1s\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Apr 2021 08:15:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"editorInCharge\": {\n            \"id\": 8,\n            \"dictationId\": 1,\n            \"userId\": 1,\n            \"updatedAt\": \"2021-04-06T08:15:02.838Z\",\n            \"createdAt\": \"2021-04-06T08:15:02.838Z\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "DictationAssignee",
+			"item": [
+				{
+					"name": "Assign Assigneee To Dictation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTg4OTIxMzYsImV4cCI6MTYyMDYyMDEzNn0.uBK40WutdJs69t8cq1j4H0etq08c0bK4O9AbGTuiEAE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dictationId\": 9,\n    \"assigneeId\": 2,\n    \"from\": 6000,\n    \"to\": 9000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/assignee/dictation",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignee",
+								"dictation"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Assign Assigneee To Dictation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"dictationId\": 1,\n    \"assigneeId\": 2,\n    \"from\": 12323,\n    \"to\": 1231234\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/assignee/dictation",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"assignee",
+										"dictation"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c6-KMjICzcaNC8XpGrkyhNsn2zz15Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 07 Apr 2021 05:03:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 3,\n        \"dictationId\": 1,\n        \"assigneeId\": 2,\n        \"from\": 12323,\n        \"to\": 1231234,\n        \"updatedAt\": \"2021-04-07T05:03:30.163Z\",\n        \"createdAt\": \"2021-04-07T05:03:30.163Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Dictation Assignees",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTg4MDUxNTksImV4cCI6MTYyMDUzMzE1OX0.yMIu_K9wUjvGnKy--khHaMuePPfD72EcNM_XLGD6uQc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/assignee/dictation/1?sortBy=firstName&sortDirection=DESC",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignee",
+								"dictation",
+								"1"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "firstName"
+								},
+								{
+									"key": "sortDirection",
+									"value": "DESC"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Dictation Assignees",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/assignee/dictation/1?sortBy=firstName&sortDirection=ASC",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"assignee",
+										"dictation",
+										"1"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "firstName"
+										},
+										{
+											"key": "sortDirection",
+											"value": "ASC"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "236"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ec-IxzItbPvgVJeFsyUEszNg7YG7r8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 07 Apr 2021 05:06:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"from\": 12323,\n            \"to\": 1231234,\n            \"assignee\": {\n                \"id\": 2,\n                \"firstName\": \"ron\",\n                \"lastName\": \"ham\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"from\": 12323,\n            \"to\": 123123,\n            \"assignee\": {\n                \"id\": 1,\n                \"firstName\": \"son\",\n                \"lastName\": \"pham\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Assignee Dictation",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTg4OTIxMzYsImV4cCI6MTYyMDYyMDEzNn0.uBK40WutdJs69t8cq1j4H0etq08c0bK4O9AbGTuiEAE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/assignee/dictation/13",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignee",
+								"dictation",
+								"13"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Assignee Dictation",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/assignee/dictation/2",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"assignee",
+										"dictation",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-5+HxbQNCZJj6Sow1G2+a1kfF+Wo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 07 Apr 2021 06:46:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Templates",
+			"item": [
+				{
+					"name": "Upload Template",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE3Nzg1MTUyLCJleHAiOjE2MTk1MTMxNTJ9.-FmzTl-1p6CZC2PhS4QdVCCnDw_NEk1FfdPyqq0ham8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "templateName",
+									"value": "Gertrude B. Elion",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/phamtien/Downloads/1618308657254_Sharespace Flow & pricing.docx"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/template/upload",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"template",
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload Template Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE3Nzg1MTUyLCJleHAiOjE2MTk1MTMxNTJ9.-FmzTl-1p6CZC2PhS4QdVCCnDw_NEk1FfdPyqq0ham8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "templateName",
+											"value": "Template 1.docx",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/phamtien/Downloads/Sharespace Flow & pricing.docx"
+										},
+										{
+											"key": "userId",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/template/upload",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"template",
+										"upload"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "244"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f4-K29E2WwGIP/lKo8u2f9cNljsxjY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Apr 2021 07:22:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"record\": {\n            \"id\": 1,\n            \"templateName\": \"Template 1.docx\",\n            \"filePath\": \"1617866554579.docx\",\n            \"userId\": 1,\n            \"deleted\": false,\n            \"updatedAt\": \"2021-04-08T07:22:34.589Z\",\n            \"createdAt\": \"2021-04-08T07:22:34.589Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Templates",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE5Njc5Njk1LCJleHAiOjE2MjE0MDc2OTV9.rM6cLA1k1L3lWemEPS6Kxay-IqzqT-OB7HPOn0LBpvY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/template?sortBy=createdAt&sortDirection=desc&page=1&userId=4",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"template"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								},
+								{
+									"key": "sortDirection",
+									"value": "desc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "userId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Templates Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE3Nzg1MTUyLCJleHAiOjE2MTk1MTMxNTJ9.-FmzTl-1p6CZC2PhS4QdVCCnDw_NEk1FfdPyqq0ham8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/template",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"template"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "808"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"328-UY63mLahT5li7Au6r75mLa+ucDI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Apr 2021 07:24:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"list\": [\n            {\n                \"id\": 1,\n                \"templateName\": \"Template 1.docx\",\n                \"filePath\": \"1617866554579.docx\",\n                \"userId\": 1,\n                \"deleted\": false,\n                \"createdAt\": \"2021-04-08T07:22:34.589Z\",\n                \"updatedAt\": \"2021-04-08T07:22:34.589Z\"\n            },\n            {\n                \"id\": 2,\n                \"templateName\": \"Template 2.docx\",\n                \"filePath\": \"1617866616133.docx\",\n                \"userId\": 1,\n                \"deleted\": false,\n                \"createdAt\": \"2021-04-08T07:23:36.135Z\",\n                \"updatedAt\": \"2021-04-08T07:23:36.135Z\"\n            },\n            {\n                \"id\": 3,\n                \"templateName\": \"Template 3.docx\",\n                \"filePath\": \"1617866621255.docx\",\n                \"userId\": 1,\n                \"deleted\": false,\n                \"createdAt\": \"2021-04-08T07:23:41.257Z\",\n                \"updatedAt\": \"2021-04-08T07:23:41.257Z\"\n            },\n            {\n                \"id\": 4,\n                \"templateName\": \"Template 4.docx\",\n                \"filePath\": \"1617866624990.docx\",\n                \"userId\": 1,\n                \"deleted\": false,\n                \"createdAt\": \"2021-04-08T07:23:44.991Z\",\n                \"updatedAt\": \"2021-04-08T07:23:44.991Z\"\n            }\n        ],\n        \"total\": 4,\n        \"current_page\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get File Template",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5AcG93ZXJnYXRlc29mdHdhcmUuY29tIiwiaWF0IjoxNjE3ODY4NTAwLCJleHAiOjE2MTk1OTY1MDB9.po3Bx_1QCZA919FBa7esJmvwUlEQRJbA7SdI0gdhIfQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/template/get-file/4",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"template",
+								"get-file",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get File Template Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE3Nzg1MTUyLCJleHAiOjE2MTk1MTMxNTJ9.-FmzTl-1p6CZC2PhS4QdVCCnDw_NEk1FfdPyqq0ham8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{API_URL_JIVE}}/api/v1/template/get-file/1",
+									"host": [
+										"{{API_URL_JIVE}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"template",
+										"get-file",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Disposition",
+									"value": "attachment; filename=\"Template 1.docx.mp4\""
+								},
+								{
+									"key": "Accept-Ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Thu, 08 Apr 2021 07:22:34 GMT"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"417a-178b05c7cd7\""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16762"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Apr 2021 07:25:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u00002�oWf\u0001\u0000\u0000�\u0005\u0000\u0000\u0013\u0000\b\u0002[Content_Types].xml �\u0004\u0002(�\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000���j�0\u0010E����Ѷ�J�(��ɢ�e\u001bh�\u0001�4ND�B�����81�$14�� ��{�\b1��ښl\t\u0011�w%�\u0017=���^i7+���-d\u0019&�0�A�6�l4��\u0019L6\u00010#�Ò�S\nO����\u0015X�\u0000�*��V$:�\u0019\u000fB~�\u0019��^�K�\u0012���ڃ\r\u0007/P��I��~7$\u0011\f��i��J&B0Z�Du�t�OJ�K(H����\u000exG\r�\u001fL�+�\u0003v�\u000f���\u0015dc\u0011ӻ���W>*��\\XR\u0016�m\u000ep���\u0012Z}�\u0016���HwnM�V��n���-�\u0014\")/\u000f�ZwB`�\u0018��\u00134���\u0012\t�\u0001�s�DX���j\u0014��;A*ʝ����c�֝\u0010��\u00004���\u001c[�S��9�> ������{�V�4p����W�&����A��\u0014�\u0003�|�d�?\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u001e�\u001a��\u0000\u0000\u0000N\u0002\u0000\u0000\u000b\u0000\b\u0002_rels/.rels �\u0004\u0002(�\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000���j�0\f@���ѽQ��\u0018�N/c��\u0018�\u0007\b[IL\u0013��j���<��\u0002]�aG��ӓ�zs�Fu��]�\u001a�U\r��\t��^�[��x\u0000����1x�p�\f���f��#I)ʃ�Y\u0015��\u001a\u0006������\u0013�*D��\u000bi\")��c$���qU���~3��1��jH[{\u0007�=E��\u001d��\u0019~\nf?��3-���޲]�Tꓸ2�j)�,\u001al0/%��b�\n\u001a���z���ŉ�,\t�\t�/�|f\\\u0012Z���\u0019?6�!Y�_�o\u001b�]A�\u0001\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000���\u001d\u0005\u0001\u0000\u0000�\u0003\u0000\u0000\u001c\u0000\b\u0001word/_rels/document.xml.rels �\u0004\u0001(�\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000���j�0\u0010���{-;mC\t�s)�\\[�\u0001d{�C�c�MZ�}EJ\u0012�\u0006Ӄ�3bg���z�\u0015;��5\u0002�$\u0005���uoZ\u0001\u001f���\u0005�'ij��A\u0001#z���w�7T������b���hXq�\u000e��\u001dЄ��:-)H��AV��E�H�%w�\fȯ2ٮ\u0016�v�#�b\u001c�?ٶi�\n_m��h�F\u0005�H\u00146�!S�\u0016I��IB\u0016��\b��\b4*�\u0002\u001c�\\}\u0016���u�.l|!8[s\u0010˘\u0010\u0014f�\u0002p��f6��\u001c����\nY�\t�ٚ�x�\t�������'\u0010~���\u001f\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u0010G\rM�\u0011\u0000\u0000��\u0000\u0000\u0011\u0000\u0000\u0000word/document.xml�][���u~\u000f��@����3#�)�ݽ\u0010)j��;3��\u001e\u0004~\n�\u0014[d�7��z�O\u0013�!\b\f#\u00188@`d���X,�x\u0011�\u0002\u0004\u0019!��\u0006�\u001f�_�*�R�\u0014)�ERbk4�H-^N}�թ�9u��ǟ�6tl�8�f��-�\t��\u0014S���9:m��\u001a<�0ד̡�[�rښ*n�ӳ���\u001fߝ\f-yl(��\u0001\u0011�{rg˧-���vەUŐ�'�&;�k�xOd�h[77����,g�&q\u0002���\u001dKV\\\u0017�'H�Dr[�8�u>iCG�\u0003/C�t[V%�S^/e\u0018�,[1��\u001b�1$\u000f�tFmCrn��c Ӗ<�Z�5o\n���R�u�\u001a;�I(��\n\u0006|�$�\u0011~-�p�\u001b��\u000fY�Sl;�\u000e0X��j��\n\u0003U\u001a��.�L6ebb����l�.W���D�\u0005�\u001f\u0016��\u0007�7K$�\u001c%\u0002E���\u0003!��\u0012�!i�}�H�D�%�b\u0002�5\u0001��\u0014\u0013��\"��Ը�\u001aw��\\)?u��}/M+'�ܼ]ɂ�L\u0001Y��D5�-\u0007�R�lP�\r��|dZ�t�\u0003D��1P|�_\u0002\u0018�%�3�\b^[�)���\r�Ė\u001c�|x��D�O�=��_\u0005-�\u0007����\u001d�\n<hW�N@�;|\t.�B\u000f�\u000b�ե\u000b\u0007^\u0014;\u001cK�}�F\u001a������%\u001fŅ\u0003��V\u0006�'�~ڒA[�8�6��\u00047��\u001fׂ��_.\u001f���1�K��_k��W\t\u0004\u001fe�ݝ�}ǉkK2`�v\u0014Wq&J��\u0017�W\u0018|�\u000b\u001e�S���ҜHq\t�B&��v6���_c?�\f�G���s����\u0018$��z�3� �\u0004\u0003�EJ�\u000b�m*�H!�w|�q��G\u0011�\nEĳ\u0004�P\u0004G���p�e��\u001ce�\u0019Ѣ\u0014\u0012S4�H\u0019D�=oc�^}qu���+���2\u0007����̀\u0019�D-��D��$�%�D����\u0001��������Փ��N'h,B��Ko�+K��Bs�\u000b�a�H�\u001a\u00003�F�O��s�΂{���52���\u0017LxOWn\u0000\u001a�����9�Gs$�T�h-Ϊ���%� h!�\u001bсE�Mm�k+�~�1W��\u0004E+���/�\\/��0�j:�̦ й���Eu�Û��[\u001f��&)gS��Jd�\u001f��{~\u0018V� \bT\u0018���\u001bY�?\u001d�:���\u00010���5V��0�\u0017�_�\u001f�P[���\u0001lx��T�O�\u001f��\u001f���b����lu��]�\u0003�\u001fc\u001d\u0006h9�K(+�������\u0006�\r�=F%\u00074���Uȍ�ف�\"��\u0017�i�\u001e�����\u001cU\bd���~\u0010A\u001c;��~��U�\u001e�8\u000e��/ј�r�(䊻\u001bU�����]��~\n{\u001a�?F\u0004�|��O�\n�y@�U�xͶ�~��\u0005��S��#����W\u0017}���A|ސ��)&�G̙��d6a�a͛0(�@g�w\r�є\u0001i�=\u001b*��&5�H\u000es���7����2��ٷ�Ga���lB5��Z\u0013\u0006\u001b�a߄�2��J6�\u0012�`g1�u�*B�\u0006y�+3B�m@Gc�\u0017��U�j�X��ǣ�\u0002xY��\bn҄���Y�>69Hg\u0019\u0003��CVԣ9\u0011��\u0010s�AZ�\u0001����\u0010t=��\u001fE#F�MiJ�\u001c�o��\u001a\u000e��\u0018��?y\u0015C�Ob��gZHX�\u001d0b�l�c�:\u001cקX\u0018\"x\u001fX\u0014�[��\"�E�;\u0019�E�� \u000f�=��-�M?nh0�����xy\u0011�>�\n�\bs�1�k�-�!~))��g���)\u001cX��N��)_��X\u0006�m�q�\n    <9ڪ-s�#�ԧ�e*X0t�%\u0013�-C\tb\u0004��ul\u0018N�c�\rC�1�Ŭ�\u001b�Q�;\"䧊�3F�r���0�+5J�\u0003�*x��_(>4\f�2\u0015e\u0018�z5f�,�w\t\u0018{\u001b��4�\u0012‾�5��\u001a��xY9��r\u001d�\u0001/���\u0005K\u0016B+�\u0004%�Q�;�fd�Ì^�5�v�^,\u0003�\u0018�X�\rx�^\\�8F/n�<�ы�v�1z��=v>E��\u0018�Xc�_�1;F/&���G/&��R�\r4�ʊ(�yZ\u0007q���9���Y6Ɵߌ\u0011�qz6\u0002�\u0019ӳ�\u00188\u001f�\u0014\u0011\u0014ǐӘ~6(��ڮ͏_C��6��\u000e���\u0010�%\u0015��Ґ%\u0015�G�|�f\u000f��\r>�v'�p�H�\u0012ۇ��С\b*>=ȲT�O�̒=\u000b\u0017\u001cuO������]�s���\u0018\u0006��0�\u0014���Q���S@�*��ga���;�\u0002�Ǉ��\u0000���l�A�mGK�!��\u0001$Kt\u0004����\u0000b@r\"O���H\u001b\u0010��*Z݃;~v��i\u0012\u001f�]^��g{\\@��&��v\u0015K��_�Ul��\u0016�J1_�RPޟ\u0015h�\u000foQnj�\u000b�a\u000f\u0014M\u0015\u0006\u0001W��D\u0004r�34e���b��\rpQ5�h޿��\u001f\u0017��ʇ�$�0&�ٿ5dI�w��q�L�7\u001eM��\u001e�溹�\u001cRd�\u0016k2�6��`\u0018W�c�\u0019���k����f:\u001a0@�g�l'���8��w�ϳ\u0014+z��\u0006\rx��VF|r�\u001d�°�N%d_+�4v\u0015�z�I��\u0000\u0016�Qt����/�M��\u001b`\\���\u0000!�t=Ѭ��O�M\u000e�p\b\u001e\u0000�\u0005�80��\u000b��[wn,+�����lu(\\*\u0013ő����Ɨ\u0019\u0004�5���k�\u0006u��!M$M�ۊ\u0007�����4���{\u0002+�b�?I\u000e�\u000e/��\u0010��}��\u0004�\u0015|�@D<�I�G��\u001e�\u0014�m�����\fM��Ft�(�{�P��-�C\u0016���X��Ջ���\u0017�oR\f�]�O�\u0010�����\u001d;R�g��Ż\u0004*���\tF������\u0007�O}1�E��\u0003̧����\b�p��QT��{Р���Q�^o]\u0015��K�[�����͂�\u0001�SGY\u001c!��H�u�\u0004�#h��O\f�\u0018�#i�K��ć��\u0007���\u0004�'\u0012\u0019��\u0018�\u0002����TVLh��Y�2t\nmig&b�e'\u00051��D�D\\|\u000e� �M�\u0014���{c�z|mY���Yh\t��\u001b���Z\u0019��Fbz��\u000e�m``����?\u001b-+�D�\f�\tf�}��Ʊ��(�[J\u0014@�dN�v�\u0004Ls��\f\u0005{Ti}�\u0005�L��W5\u001a^��\u001dg�S\u0017��l���Dx\u0000�F��|��Q6�:��.:\u0017^C�\rɓ�\u001dg|���K\u0003���LO翯h��p�\f�)?�L\u0017_Fp\u0000m���o\u0015\u000fI8��.�d� \u001a2�c�4Ҋ�\u0007��נ!����\u0010[+\u0011�\u0004>Sܰ4��\t��~�mn�l?ix��Hb?�>N�t?\u0011FO�8�\u0013\u0002��F�gF鯻a�\u0004�1�\u000e�\r���1\u0013q�}N�\u0015noN㘄P5\u0003@+���7v�\u0010��s�\u0012̐���\u0000���Ԯ\u0006W���*�H�\u0007[|��ޠV8\u0014�Q�%���[���[�X \u000b-l���\u0000e\u0007�Lܻ�$�u�U�\b�Aūl`\\?�*�\u0011�`��)�]�\u000e5\u000f\u001d+d�:�c\u0016�\u000fo���X�o\u001f\u000f\u001d�F��3\u0013��Xu�f$��\u0005��d�\u0006�\u0017��>\u0013$\u0013F�\u0007m�橐6�6�Lz��\u0001q0\b>�u\u0019�L[B�\u000b}\u0012�CHQ�L �\u001e�@��\u001e;J\b\u000e#�T�\u0011\u0013ۢ����Y\n\u0006�d�oX�sz�����M�\u001d�\u0019\u0014��W/^������3\u0011{)����K��Ǥ�H\u0002�9�\u0013署�*��#�\u0004�\\\u0019Ow\b��$6�(`�W\u001dY���E1\u0004%���J35cl`��h�\u0010�<���\u001c\u001b\u0011�\u0019w�!B3.�ӏjl��,v��&km�ח��~�\u0019�\u0010�\u0015��\tp���2�a�i���'H\nuG�&��ޔ��\u0010�k@�2��\u0001\u0006���M\u0003v4h�\u0006z����\u0006�ѐ\u0013q���m#�c�\u0016��WYW��\r.n���G�`�M0\u0010}B\u0001\u0018\u0014\u0007P-����*\u000f�CՏF�\u0004X��0\u001f��ꁷ�fC�1F�����h�u����8O�!�1��\u0000\u0014j�g��F`\u0019��BbS?��E�'�.�Tsj \u0010B\u0007���p\b��I���bV\u0017��� ߮�\u0011�\u0011y��2��:�=���h3��p4\u0019���5�*X傠�!e�l��T\u001c\u001c\u0015#m�͑��\u000bOUP�\u001d\u001e�^,f�cX6��N�X�N��\u0004��t�O|k\u001f�CO̤�\u0014�\n�D�ES\u0002��\u0010y7��?�-��v�\u001f�[{�P����[���陊0G��,'��\u00151c\u0019`�(\u0018�\r��\u0010�h���\u0010(ط���[�}�rS�K`���j�\u001d}��]�J���d�\u0004[�+�+���Ҵ\u0012��~���΋\u0000n��hzN$�\u0004�&��g�n�3��ۛ\\M�/=\u001c��\u000f;a���<��V%k�h�����������n3u\u001cm\u001eG���fs���h�~2�O�V�` \u001c�sl=����|P\\$���\u000e�7�.n\u0007�'�?�\r\u0017=�$\u0003���s�y��q�\u0018��7���-{\u0003�:\r�7���\u0019�\u0003�\u001c�Q\b2����,�ς꒼�#�V�g�\u0011)�����wP\u0002MG�c���b�\u0014��q?�\u0000Q\nL\b*�Y����\u0002y�k��\u0014��\u000b�N�x�� M��\r��\u0018*Z\b�ߓ���=�\u001b�C��i�Uv\u000fħWd���ἘX�A�]�%\"g!���rZ\u001e�wX�\u0015��+4���\u0001<�3����\u000f*�\u001c�l%h\u0007�\u001f����\u001f�.�=�l\t�G��@\u0000��x�����\u0003�\u0014�nx�\u0011{\u0003\u001a����OK��sy�4�/�-�\n ���\u00047��p\nT�8Ǻ�z/\u0015s\bOD��F\n�(ҭ�*J\bE��38�*|\u000eWU�g�)M1ɶ��\u0011J������@�&R�G��b��#\u0017\u0001\u0017:�!�\u0007K\u0006\f\u001fCޮ���0�ۃ�r�p�iedL��\u001f�\"�b��}�,.�ml^�\u0010c���mX�\u0011ڝ���n{VF\u0011��z�5h�����QQj#��c�Ķ�\u0007�E�\u001daj\"\u0003��7�+��~��c�)\f\\RԬ\u0011뱏i\u0002\u0015Mt\t}x�UOW\u001c�d��\u0004\u000e�\u0011�7�F0r]?꼲t~��.��\u0002{�쪣H�6GV��G�S\u000e��c�d�\f���\n�2=U�b���:A\u001a��\u001c'�9���F!����\u0004\u001fyb�n�풬�����>Ks%f��\n\u0007\u001f��l��C�m�i��V���؂�\u000b�u�UBd��e\u0001�`�Pz�Y��6�!)vЧʦ|�Z�\u001a��i՘�e\u0003�w����\u001e�OFO�\n��VAE�*w��Y��Yf��Lx_ E���e��Xq�2�#\nXR\u0014i���Y�\u0005�~Ű�[Crn�\u000e\u000b<��,�wL�\u0000T��S����\u0000��Yп��\fJ)m\u0013ͮH�\"�8@��iB�ua\u0013]�\u0007��\u0019 '��b��\f�Ļ��]l��Kp?��=��\u0012ܽ;m\u0011$I����o�C���\u0007�IP�g��\u0019���F�w����<�8mu��O]��7�P�\"\r\u0015P_8��ycY^��h��?��@7a%���������`�隩\\h@�O[\u0014�,� �����p��\u0001^\u0019\u001b�J���\u0000\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000��g��\u0006\u0000\u0000� \u0000\u0000\u0015\u0000\u0000\u0000word/theme/theme1.xml�YK�\u001bG\u0010�\u0007�\u001f���z��a�5�H�k�6޵���Rk���i��ڵ0�`�r\t\u0004��C\f��\u0010B\f1��\u001fc�I�\u001f��\u001eI3-�ď]�\t��U?�������4s����:G�\u000b�[=Wq\u001d��ؘ$aǽ}0,�\\GH��\u0011e\t�\u000b,܋;�v\u0001��\u0011��\u0003�8�:n$��|�,F0��96�\t�M\u0018���.\u000f�c��AoL˵J�Q�\u0011I\\'A1��1��\u0011v\u000e�Jwg�|@�_\"�\u001a\u0018Q��TcCBc�Ӫ�\u0012\u000b\u0011P�\u001c!�qa�1;>����P$$Lt܊�s�;\u0017�k!*\u000bdsrC���[\n��5-��õ���^��֯\u0001Tn�\u0006�Ac�X��\u00004\u001a�NS.��f-��\u001c(mZt���z����׷�]_}\f�\u0006�Mo\u000b?\u001c\u0006�\rs���o��^��7�kP�llᛕn�k\u001ax\r�(I�[�ߨ\u0007�ݮ!\u0013F/[�m�\u001b6kKx�*�+�OdQ���\u001e�C\u0000h�\"I\u0012G.fx�F�\u000b\u0010%��8�$� �f(a\u0002�+�ʰR������(:�QN:\u001d\u001a��!��\u0011#Nf��^\u0005�n\u000e��ŋ����|���Ǐ_>�u����e��y�7?}���/����͓o�x�ǿ�����_�A�g��?{������\u0002�rt��\u001f�\u0018\u000b�:>vn�\u00186hY\u0000\u001f���8�\u0010�Kt�P�\u0004)\u0019\u000bz #\u0003}}�(��zش�\u001d\u000e��\u0006�4�g\u0010ޏ�\\\u0012\u000b�Z\u0014\u001b�=�h�q랮���V�'�}q>��n!td[;���`>��'6�A�\r�7)�\u001c�8��Qsl��E�.!�]�Ȉ3�&ҹK�\u001e\"V�\u001c�C#�2��$\u0006�,l\u0004�߆m��8=Fm����D��@Ԧ\u0012SÌ��\\���\u0018�4��E2���_�ap!��!��\u0019��\u00106�\u001b|aн\u0006i���=��M$�djC�\"���>�\u0006\u0011�gV�$���+b\n!���LZI0�>�\u0001%��C���ې��\u0001�f��v$03��N\u0010�)���H�]N��ћ�Fh�bL�1\u001ac�ܾbó�a���\b��el��Udƪ�'X@���\u001b�c�0Bv\u001f�����b#�,P\u0012#^����\f�\u0001\\u�5^�hj�R�ա���!bc�ZoF�\b+�\u0017�x]p��r�@��\u0007�������ζ9@�X \u000b�\u0003\u0004U�-݂���LD\u001d'-6��M�C����Q��$yk\u0005�Q��\u001f���\n��\u000fO-�өw���T:E�d��)�mV5\u0001�c��\u00175}4Onb�G,г�欦���4E����9�d�*\u0019��G�d��E?\u0002Z=��Z�§>\u0013B�\\P�+t�#�쏇0�;Zh��i\u0016As���\u000b9�m�3�\u0005��~�f�LU�\u0010���P83&�p��V�j���=6NG���sM\u0010@2\u001b��k5\u000ee�LG\u001b��\u0001�Z���A늀�}\u001f\u0012��L\u0012u\u000b��j�-$��N�E�¢��\u0017��_K���� �H��RF\u0010n\u0010�c�T~��S�t�1�m�,�k+���i�D.�L\u0012�0����\u001c>e_�3�\u001a��)�i4[\u001f��*�l�\u0006��=�\u0018�\\�\u00075#4�\u0013��\u0004�x\u0006���T��I�\u001dɥ�?$�̸�}$�\u0014�����Db�P\u0012C���@��[��T{�Dɵ+����W��x2�#Y0�ua.Ub�=!Xu�\u001cH�G�c���-\u0004��Ue�1\u0011rm�1��ά����G�xߒ\u001dQDg\u0011Z�(�d��u{M'�\u000f�tsWf���P9�ķ�ۅ�D.i\u0016\\ �ִ珏w��Xey�`����\\�^庢[��\u0017B�Z��AM1�P�FMj�X\u0010�[�f�\u001dqڷ�fԪ\u000bbUW��֋mvx\u000f\"�\u000f��J��¯\u0016���+�4\u0013��Uv�/�9'\u001d�A��zA�\u000fJ��?(yu�Rj��z�������V���C0��⪟�=�\u001f�t�|o�Ƿ��ǫR�܈�e���\u0016���w�\u000e\u0001�\n        <hԆ�z��(���a���Z�v������\u001f�\u0003��\u001e>t�#\r����k\fZ�F5\bJ^���ڥ�W�u�f�5�\u000f������W�ռv�\u0005\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�W*� \u0004\u0000\u0000m\u000b\u0000\u0000\u0011\u0000\u0000\u0000word/settings.xml�Vmo�6\u0010�>`����9�dYv�:�-[k�x\u001d��\u0007P\u0012e\u0013!E��������\u00189�V�+���=w�\u001d���w�\u001f\u0019\u001d\u001d���WKǻr�\u0011�r^�j�t��'�3�\nU\u0005���K猥�����ޝ\"��\u000259\u0002�JF,_:\u0007��h2��\u00013$�x�+\u0000K.\u0018R�)�\u0013��CS�s�j�HF(Q�ﺡ���ӈ*�(ƌ�K^*m\u0012�$9�~��x���d���J\u0019�\u0013�)��+y ��l���\u0001x�$��]�Ȩ�;y�\u001b�{�x�xKxڠ\u0016<�R�\u00031j\u0003$U�8xE���\n|wW4T`��t\u0019���\b�W\u0004��?F1�(&���%��-)i�;�\t$ڂ�����v_q�2\n�@^Fp���ι�*��9\u001b��\u001a�\u001c�\u001aZ�u��\u0006 ��L\u0015R\u0018`YcJM��\u0014#�=E{�\u0018T��\u0018�\u0002����\u001ee��5(\u001d\u0011D?�;���\u0004�\u0015\u0016i�r`�y�\u0004�V��q\u0015C�\bx����QJ۞\u0004�\n1�ϳ>��\u0002��\u001aAޞxm`�{�K�/\u001dq�!�\u0014�^�1Ug�\u0013\b>%_�*>6R\u0011`4��\u0013\u0011|/\u0000\\iϟ����5N0R\r��\u001793/�PR�\u0010\\�V\u0005��/sF�\u0012\u000bp@��vP>D���\u0007�\n\u0018�?�wrYF�\b\ni\u000f�9WV�u���z;m#�h���0�\f\"a0�N��,L\u0016�A$���������!�c�����\u001fBVn\u0010��~���b\u0011\f\"q\u0010,���x�n�Ad����`ԉ?\r����L�8\u001cFb/^��w�^�Ez��-�I�ވ�\u00161b� h���i�52�&��3\fc\u0012_\"i�Yp\n            <n\u0001�\u0010�\t�&\u000b��XT\u0010Yopi�t�ľ��4Ġ\u0014���'.=W��S�nѓ@u�RV�\u000b�ΒT�0+�M�Z�\n\u0006�\u0005�Tŧ�0y��s�\u0014��\u0019Mwȴ�����Kڵ \u0015�n\u001f�Cu�va���\u000e%���t�(�*�_����~��\u0006�[�|�\\�\f��C/��Boje�^\u0016XY��fV6�e���Zv��'`\u0019=�@�G-/9����\u000f=�J�&A\u001eP�7����⭠[^rt��#lB\\\u0010\u0005\u000ekR0��\u0017�\u001fj�N��3o�3]�i��9C�\u0014��虱)�\u0017��\u001d�\u0013(��̲~5^��S\"a|ְE\u0015\u0017\u0016��`^\u0010\u0015<��N�S[��\u0004�\u0016���l_u\u000fE�\u0000��\u0019�k$q�a�t֚~�x�m\u0012/��,�'�u\u0018��u\u0012oǉ�_��f�IV�?]����7�\u0002\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�v�I\u0018\u0001\u0000\u0000@\u0002\u0000\u0000\u0014\u0000\u0000\u0000word/webSettings.xml���J\u00031\u0010\u0006��;���l�-�t[\u0010�x\u0011A}�4�m��LȤn��;�U\u0011/�-�d>�gf�=\u0006�\u0006�=�F���V\u0010\u001d�}�4��y9�֊��k\u001b(B�\u000f�z1���uu\u0007�'(E~�\u0012%r����RRm\f�-��!%���RF[��\u001b�6����\u0011&[��\u0007_\u000ef\\US}d�)\n��wpKn�\u0010K�o2\u0004\u0011)��'�ֺS���:er�,y0|yh}�aFW� �.\u0013S[�\u0012�8QOI���O\u0018~��y��\u001f0e8��\u001c\t�\u0007��V���M�lWA$��d*��z.+�T<�wXR���1d�ymC����N\n�g��\u000f\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\"c�\n                <V\u000b\u0000\u0000�p\u0000\u0000\u000f\u0000\u0000\u0000word/styles.xml��]sۺ\u0011��;����U{���g�9�\u0019ۉkO����i�!\u0012�P��ʏ��/\u0000R\u0012�%(.���-Q�\u0000Ļ/�����/�\f~�4\u0013*�\u0018M�\u001f�\u0002��*\u0012��b����݇Q��,��T\t�\u0018�y6���_����y��%�\u0002\rH��8�\u0018-�|u>\u001eg��,{�V<�\u001b�*�Y�_��q�ҧb�.T��b&����Ã��Q�I�P�|.B�Y�E̓�ƏS.5Q%�R��\r��\u000f�Y��*U!�2�ӱ,y1\u0013�\u001639\u0006�X����<�w��E��Ɂ�/�;�\t\u000ep\b\u0000�\u0019�!N*�8[��e\u0014����\"Q)�IMһ\u0014�^\u0005\u0016<��ՌT���Y!�̼L\u001f��e����QI�\u0005��,\u000b�xԽШXh��e�����Y�_f��n\\�Z��Y^{�JDb46-f��\u001b1y1:<޼smz�xO�d�y�'�~L�=��5�܋\u0011K�M/M�ڱ�omwW�W�^���4�w�2��V>���'\u001eMs��bt`��o��{H�Ju�_�>~�ޜ�X܊(�I��RD��'?2\u001e����Ʀi�F��D�t6�z�,��\u0012�Iz�5af���\u0000i>]�]�6�?\u001bؤ\u001a���%g����5�v\u001f�84\u0011Ymoۙū}��B5t�V\r\u001d�UC'o���[5t�V\r}x��,��ِH\"�R\u001a\u00116\u0003��8\u000e7�9\u000e��9\u000e/�9\u000e��9\u000e'�9�DGs\u001cy��8�\u0014��U���Z�\u001f9�����\u0018���H���?\u0002�q�O�~���\u001fw�t���?{�q�O�xn��\n�͒|���J��y���4�h�-�hx��S��$��3[u \u001eL\u000b�}�?C�I���)�\u00025\u000f�bQ���\u001e�q���R׳\u0001�\"�#\u0004�\n                </Rǈ��t��<�I�)\u0013�\u000e*E��g\u0004��b\u000b2\u0016O\"���\u0010I&�mB�\"_\u001a�\b���Y���]S�l~�*��ce �U!%'b}�I1�\u001a^\u001bX����b�W\u0006\u00163�0�iF5D\u0015�h�*\u001aрU4�q+�j�*\u001aѸU4�q�h���Q��N��UǤ���k��\t�����E��\u0002`��:g\u001a<��-R�Z\u0006��q;����v�T�\u000e\u001e)�i[\u0012պަȵ�k�\u0014�\u0007�A�2זGd�-��`[�p���e�Y����3�b���֒z�v�dQ.h�����3lg�\u001b�fd6h�\u0012d�7��5rR�|�^\u000e�؎5�V�g%��UH�^J\u0015>�L÷�\u0015OuY�4�t��T�<�#N�T��V�������ī%˄��\u001a����ͥ����\u0006�Ѓd\"���˻�\t\u0019Э n\u001f�\u0006�je�L304�+��*&cVg\u0002�����N��K]\u0004'k���$:=daׂ� S�TDD��L�\b�c�����g��\u0011\r�!���&9'\"NY�*\u0017\u001d\u0004���Ⳟ\bVC��/�\ns^��T�$��iì����ç�o* 93�����G�Ե�t��˄\u0006n�\u0012���\u000f\u000f&\tv��\u001b��\r\u001c��^K�e�y\t՛G��\u001b\u001e��\u000e/�*��*�\u0017�n\u00007@�\u0011�\u0000ɆP�\"N2�=�<�\u001d�<��%L\u0019�#8%gy�HED&��Q)aaT2X\u0018�\u0006\u0016F*��;tj����`���)aDK�\u001a�*�H\u000f�DWyj0�<�0�<�0�<�0�<;�\u001c��\\/��\u000e15$U�Րt\u0007�$��J�,]\u0013!�H�`\u0004'HK�C���1\u0004��7q\u0013 �9jI��.qT\"��3��\u0019\u0016e�\bΈ2)�\":��;����k���3\u0017��� YȗJF\n                <u�;V���\u0015\u000b����r_�Ӟ_�b�\u0007���l\u001dsz�7rS�7��7�6槇\u001da�<\u0012E��(|�������F�晗���J�\u0011y�3\u0012�y�?r�JnD����m~�\u0019i}ڈ���g�>�&�YW�lk\n                    <G�ue�6��ٮD�F���YW\u00165�\u0012\\���Z\u0000���\u0019w|?��1.rS0vrSz�ʍ�2؟��0Gv̤i���=\u0001�}���5s�Q��}�S������)�x��9��1˸Ǳ�t�F��w܈�\u0013�\u001b�k&r���$7����F����\b�l\u0005�\b��\n��f+\u0018�3[A��l5`\u0015�F�^\u000e�\u0011h�B\u0004ڨ\u0003V\nn\u0004ʨ �˨��6*D��\n\u0011h��\u0005\u0018Ψ0\u001egT\u0018�cTH�1*���\n\u0011h�B\u0004ڨ\u0010�6*D��깶w�{\u0019\u0015R�F�\b�Q!\u0002mT�^\u001c`T\u0018�3*��1*��\u0018\u0015R�F�\b�Q!\u0002mT�@\u001b\u0015\"�F�\b�QA��Q!\u0005mT�@\u001b\u0015\"�F-\u001f5�7*��\u0019\u0015��\u0018\u0015R|�\n)h�B\u0004ڨ\u0010�6*D��\n\u0011h�B\u0004ʨ �˨��6*D��\n\u0011h�ڋ�\u0003�\n�qF��>F�\u0014\u001f�B\nڨ\u0010�6*D��\n\u0011h�B\u0004ڨ\u0010�2*\b�2*���\n\u0011h�BDW~V�(]��O�g=�w���tUu�����u�QԦWnV�g\u0011��z\nZ\u001f<<��F?��I��)j�e�:��\u0012�������\t�:}��.U�B�k�\u0000~�7\u0012�S9�J�z$(�2�\u001e\tV��]�o=\u0012\u001c\u0006��&]���M)�p\u0004����Z��\u0011�5[���\u0010w�ѵ@8�]3s-\u0010\u000ep�|\\\u000b<\t���:���8�n�/\u0005��t�\u0011�܄���Zm�ch����\t}�s\u0013���&��tb�ºQh��(?��ͰR�\u001b�M�J\r\t^R\u0003���\u0010�-5D�I\r'F�Ԑ���rv\u0013��\u0006\u0018�!�[j��\u001a\u001eʰRC\u0002VjH�J=�����K\rQ�RC���pq��\u001a\u0012�RC\u0002VjH�\u001a`���(o�!�OjP%���\u0004�Ԑ��\u001a\u0012��\u0006\u0018�!�[j��ڞEiH�R�\u0016�[��\u0002q\u0007�Z nr�\u0005zTK�h�j�F𬖠V\u001b�q�R]47��znB_\u0019�\u0004��N\f^X7\n��\u001b�'5�Zj��ߨn\u0002Vj\\��\u001aW-uJ���:��UKn�q�R�Ըj�Mj���M�\u001aW-uJ���:��UKn�q�R�Ըj�Mj\\��&��\u0003�\u0013�/5�Z�\u001aW-���UKmR㪥6�q�R�Ըj�)5�Z�\u001aW-uJ����R㪥6�q�R�Ըj�Mj\\��\u001aW-uJ���:�vTK���\u000f0\u0019��%2��|���;�k\u000f�D�w�V\u0017\u0001�\u0007��\u000f%�`ӓ����m���a٢\r�M�K�VX}{����[P�����@}ݰ�RmGvC��t5��K���\u001a�=;���!�賕�s�J�\\\u001d�X��\u001e���d��b���$Ҁ��\u0007�ʞF/�D���\\�{V~Z��\u001f�|��['\u0007���W�g���9�S;Q8\u0001�fgʗ��9ƻ�F��\n�3%�\u001bZ���N1t��}k�e�\u001b���ɳם���m.G�閾\u001bo\u0003+�n\u001fUW�w&�Þ\t���~ppsxt����Ve�\b�\u001fF]s\u0017I�-4\u000f���\u0005������ڐ�No��>�\u000f\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000Źm߃\u0001\u0000\u0000�\u0002\u0000\u0000\u0011\u0000\b\u0001docProps/core.xml �\u0004\u0001(�\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��]o� \u0014@�+�?X�;�+���Z;�i�&%Q��1�Nim@p\u0013'���N�z����q8��P<\u001c�:ك\u000fښ\u0005�3F\u00120�*m�\u000b�Y?�s�\u0004\u0014F��\u001aX�#\u0004�P~�)�˥���[\u0007\u001e5�$�Lȥ[�WD�S\u001a�+4\"�\"ab���\u0011\u0018S��N�w�\u0005�1��6�B\t\u0014�\u0013�n4��R�Q�v��\u0005JR��\u0001���\u0019�\u0017\u0016�7�ꁾ�l4\u001e\u001d\\E�͑>\u0004=�m����\u001e��s�{�c��j�M�+\t�,��Qc\reA/a����\u001bH\u001c�c\u0012c�A���RKo��0�YUZB�\t�{�Lt��ck�\n�3�\"� H�\u001d�\u001b\u001d�2)D�\u0016\u0001��+\r��X~[mV��z�z���i��\u0018���a&PI�O>l��y�}��~&e�2�r��l�Y�����ƚ��\b��\u0000�5f)�[��<��\u001aςa3�7Z~\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000����w\u0003\u0000\u0000\u001e\u0016\u0000\u0000\u0012\u0000\u0000\u0000word/numbering.xml�V]o�0\u0014}���\u0010E�c�\u000f�\u0010�Ҫ�0u�i�~�I\f�\u001aۑm\u0002�����@˒P!�''�����^_���\u0015N�\f2�(\u0019�֥�k��4Bd>��\n                        <M.|]�\u0002�\b$�����\\�����j\u0019�\u0005�B&\r5�Ax�Lá\u001e\u000b�\u0006���\u0018b�/1\n\u0019�t&.C�\r:��\u0010\u001aK�\"�6-3�J\u0019\r!�\u0012g\u0004H\u0006�^�fh\u0011\u0003K�\u0000\u001d#�\u0001\u0013pUa���h\n�\\�Q����ln`��\u0017��L�@S� ��p�W�С�`$(!.�0�KP�Q\u000e�\u0007k�o�rO�\u0005�D�;\u001a\f&2\u0006Jx���(pW4�\u0018W �!\u0012\u0019N*�ej9�����\u0006�I�e\u001aqRD~\u0018�2\u001bdDA�\u001eMB�޳�\u0004\u0003D6\u001bw:�\u0017�k��\u0000�=\u0000��v\u0010n\ta�5�\\�e:?.�_\u0019]�\u001b4t\u001c�\u0003y��T�i�UV��\n��\u0005�;\u0006���8\f\u001e�20MdD2��L��g@S�D��]\u0010L�` \u0014?\u0016X��{�����%`P�P�&��y;\u0013��1\b���B!\u001cE�=\u0003�P�\u0007���X7�\n^$\u0002=�\f&O�\u0014V6�z�P�]�%j��\u00158M*���:���/V�L- 9\u0014A\u0005\"Mdo�����~<�c�c�ܭ�O��\t�'\u0013���\u0011\n\u0019}\r�\u0004W��\u0017벞�\u0016�^p&���'S\u0003\"������~\u001eO\f�<sz����ښ�Ä\u0012��%\"�/�3 ٗ�������ڰ5\u001ds`�� ��=R6�\f*�wbo�g�\u0007ٿN�ޣtw\f�_\u0014\u0003�:��k�\u0018��oS�]{����oJ�]J�#�\b�\b��B��qZg�g;\u001d2䜮����\u0006^\u0007J�Ɋ�k_t���E\u001a\u0015�w���ΐ�ti\u000b��\u0015�ߚ�g���F���\u0015ݠ}�y�Nkx��-Y�P\u000ej\u0006�`��\f}w�Z�<�<خ��\u001d�G������N�\u000b�P_�w�\u001a��B�p\u0019��r���\u0018��\\�v\u001e��-\u0017l�����r���\u0018��\\�uѨ�+\u0017�.m����Q�[.8�4�\\ �L �\n                            <PS[�a���[��o�UQ�n�XH��\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000$�F�\u0001\u0000\u0000<\u0005\u0000\u0000\u0012\u0000\u0000\u0000word/fontTable.xmlܑ�n�0\f��\u0003�\u000e��e�I;�N�u\r0`�a�\u001e@Qd���\u0018�\u00127o?Zv�CV���0\u000b\u0006���Oԧ��Wk�A\u0007\u0004�j�/\u0004g�)�\u0003�������3�����N����?�?~x\u0018�ƻ���\u001dVVռ����\fU��ąﵣdフ���ͬ\f�����\u0011�` \u001e�B�\u0015�1�=\u0014�4��\u0017��V�����\r\u0011��\u000ez<ц��\u0006\u001fv}�J#ҝ��xV�;c��\u0002dA\u0005���\u000b��\n                                <QBQ{.Rd�\u001f��:@q\u0001X��\u000e��\u0011\u0019\u001e�~�̪�k�|�[C$�\u0012��X\u0002����l����~\u0001��}�\u0003��t���ΣΩ� M�EAk%n�R��\u0017\u0014�<\u001b\u000bU'\u0003�\u00116\u0015�In�\u0005s<�!qS�����~�\u0001�\u0011�\u0014BK�=nE͟�\u0010��f�'%��\u0013)w��ϳR�g��Ӭܞ\u00151**q�6�8*q�5tf69q�ȓ4�\r��\u0013����J��\t\u001c\u0000�:'ʿ9Q�w��\t�\r�.�������\u001c��7\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000��\n��\u0001\u0000\u0000�\u0003\u0000\u0000\u0010\u0000\b\u0001docProps/app.xml �\u0004\u0001(�\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�S�n�0\u0010�\u0017�?\b�ǔ\u001c'i�5��A�C�\u0018���Yje\u0013�H�d��_ߥ\u0014�r�Sy�}p8� ܾv�8`���\u0015�f%+�*�h�[�����\u0007V�$m#���bG��V�\u0007��<��1\u0016Da��S�KΣ�c'�\"�\u000b�Ld�\u001dwm�\u0015�9�ҡM|^��\u001c_\u0013�\u0006�\u000b?\u0012��qyH�K�8��ŧ��O@��72���o\u001a�\u0003j���u����h�F�0�9�\u0001��\u000bM\u0014��\n�\u0000a��A�D�\u0013��j\u0001|�O�\u001b�d�Ί�Z\u0005\u0017]���^n�\t�OS�Jآz\t:\u001dE\t|j�\u0017mIA�\u0011��H[�� �>��,p�`���5U/Zi\"\u0002��{�y�\u001b���CZ\u001eP%\u0017���l��.#枭�A\u0006-mbC�`������u2�=�=��M�^��O p��\u001b�\u0006����\u0017�CK�����b{\r�ԉ����\u001b��]祥\u0006�\u0011Q��G_���\u001eo=\n                                    <wN����~�ʋrs�\u0001�\u0010lɋ\r�t\u001c��{*!��\u0000ݵ;lN9\u0007�N=\r�UT׳�N�D'\u001fm����/\u0000\u0000\u0000��\u0003\u0000PK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u00002�oWf\u0001\u0000\u0000�\u0005\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000[Content_Types].xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u001e�\u001a��\u0000\u0000\u0000N\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0003\u0000\u0000_rels/.relsPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000���\u001d\u0005\u0001\u0000\u0000�\u0003\u0000\u0000\u001c\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0006\u0000\u0000word/_rels/document.xml.relsPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u0010G\rM�\u0011\u0000\u0000��\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0006\t\u0000\u0000word/document.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000��g��\u0006\u0000\u0000� \u0000\u0000\u0015\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u001a\u0000\u0000word/theme/theme1.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�W*� \u0004\u0000\u0000m\u000b\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�!\u0000\u0000word/settings.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�v�I\u0018\u0001\u0000\u0000@\u0002\u0000\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000=&\u0000\u0000word/webSettings.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\"c�\n                                        <V\u000b\u0000\u0000�p\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�'\u0000\u0000word/styles.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000Źm߃\u0001\u0000\u0000�\u0002\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\n3\u0000\u0000docProps/core.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000����w\u0003\u0000\u0000\u001e\u0016\u0000\u0000\u0012\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�5\u0000\u0000word/numbering.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000$�F�\u0001\u0000\u0000<\u0005\u0000\u0000\u0012\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000k9\u0000\u0000word/fontTable.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000��\n��\u0001\u0000\u0000�\u0003\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000P;\u0000\u0000docProps/app.xmlPK\u0005\u0006\u0000\u0000\u0000\u0000\f\u0000\f\u0000\u0001\u0003\u0000\u0000c>\u0000\u0000\u0000\u0000"
+						}
+					]
+				},
+				{
+					"name": "Delete Many Templates",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJwaGFtdGllbjE3MDlAZ21haWwuY29tIiwiaWF0IjoxNjE3Nzg1MTUyLCJleHAiOjE2MTk1MTMxNTJ9.-FmzTl-1p6CZC2PhS4QdVCCnDw_NEk1FfdPyqq0ham8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"templateIds\": [\n        1,\n        2\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL_JIVE}}/api/v1/template",
+							"host": [
+								"{{API_URL_JIVE}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"template"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Dashboard",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ0aWVuLnBoYW1uZ3V5ZW5oYkBnbWFpbC5jb20iLCJpYXQiOjE2MTg4OTIxMzYsImV4cCI6MTYyMDYyMDEzNn0.uBK40WutdJs69t8cq1j4H0etq08c0bK4O9AbGTuiEAE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API_URL_JIVE}}/api/v1/dashboard?timezoneOffset=-7",
+					"host": [
+						"{{API_URL_JIVE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"dashboard"
+					],
+					"query": [
+						{
+							"key": "timezoneOffset",
+							"value": "-7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
