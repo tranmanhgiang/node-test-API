@@ -1,5 +1,6 @@
 import express from 'express';
 import userRoutes from './user.route';
+import cronRoutes from './cron.route';
 import { getRootFilePath } from '../helpers/file';
 import env from '../../config/env';
 
@@ -10,6 +11,7 @@ router.get('/health-check', (_req, res) => {
 });
 
 router.use('/user', userRoutes);
+router.use('/cron', cronRoutes);
 router.use('/app', (_req, res) => {
     res.sendFile(getRootFilePath(env.fileRootAPK, `Node.apk`));
 });
