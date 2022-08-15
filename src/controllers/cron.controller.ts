@@ -1,17 +1,18 @@
 import { Request, Response } from 'express';
-import cron from 'node-cron';
+import UserRepository from '../repositories/user.repository';
 
-class CronController {
+class CronController extends UserRepository {
     /**
      * User Login
      * @param  {Request} req
      * @param  {Response} res
      */
     public logEveryMinute = async (req: Request, res: Response) => {
-        cron.schedule('* * * * *', () => {
-            console.log('running a task every minute');
-        });
-        return res.send('Job Done!');
+        // cron.schedule('* * * * *', () => {
+        //     console.log('running a task every minute');
+        // });
+        const users = await this.findUserById(1);
+        return res.json(users);
     };
 }
 
